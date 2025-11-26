@@ -32,6 +32,7 @@ body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   background-color: var(--papaya-whip);
+  max-width: 1024px;
 }
 
 /* ===========================
@@ -53,6 +54,11 @@ body {
 .fa-bars {
   font-weight: 700;
   font-size: 2rem;
+  margin: 0;
+}
+
+#highlight {
+  color: var(--vivid-tangerine);
 }
 
 /* ===========================
@@ -73,21 +79,58 @@ body {
    Card Items
    =========================== */
 .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-width: 300px;
   min-height: 300px;
   padding: 1rem;
   color: var(--papaya-whip);
   background-color: var(--stormy-teal);
   text-align: center;
-  border-radius: 10px;
-  font-size: 2rem;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+}
+
+/* Paragraph text within cards */
+.item p {
+  margin: 0;
+  padding: 0.5rem;
+  height: 24px;
 }
 
 /* Image sizing within cards */
 .item img {
   width: 200px;
   height: 200px;
+  /* border: 2px solid var(--vivid-tangerine); */
+  border-radius: 2rem;
   object-fit: cover;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+/* ===========================
+   Footer Section
+   =========================== */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: var(--stormy-teal);
+  padding: 0 1rem;
+  height: 48px;
+}
+
+/* Footer icons styling */
+.fa-instagram,
+.fa-facebook,
+.fa-paypal {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
 }
 
 /* ===========================
