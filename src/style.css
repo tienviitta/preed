@@ -1,0 +1,109 @@
+/* ===========================
+   Color Theme Variables
+   =========================== */
+:root {
+  /* 
+    Color Theme: Sunny Beach Day
+    Navy, teal, soft sand, vivid orange, and cocoa conjure adventurous days 
+    on a sun-drenched shore.
+  */
+
+  /* CSS HEX */
+  --ink-black: #001524ff;
+  --stormy-teal: #15616dff;
+  --papaya-whip: #ffecd1ff;
+  --vivid-tangerine: #ff7d00ff;
+  --brandy: #78290fff;
+
+  /* CSS HSL */
+  --ink-black: hsla(205, 100%, 7%, 1);
+  --stormy-teal: hsla(188, 68%, 25%, 1);
+  --papaya-whip: hsla(35, 100%, 91%, 1);
+  --vivid-tangerine: hsla(29, 100%, 50%, 1);
+  --brandy: hsla(15, 78%, 26%, 1);
+}
+
+/* ===========================
+   Base Styles
+   =========================== */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--papaya-whip);
+}
+
+/* ===========================
+   Header Section
+   =========================== */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  color: var(--stormy-teal);
+  padding: 0 1rem;
+  height: 48px;
+}
+
+/* Header icons and title styling */
+.fa-school,
+.title,
+.fa-bars {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* ===========================
+   Grid Layout
+   =========================== */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  grid-auto-flow: row;
+}
+
+/* ===========================
+   Card Items
+   =========================== */
+.item {
+  min-width: 300px;
+  min-height: 300px;
+  padding: 1rem;
+  color: var(--papaya-whip);
+  background-color: var(--stormy-teal);
+  text-align: center;
+  border-radius: 10px;
+  font-size: 2rem;
+}
+
+/* Image sizing within cards */
+.item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ===========================
+   Media Queries
+   =========================== */
+
+/* Tablet: 2-column layout */
+@media (min-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop: 3-column layout */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
